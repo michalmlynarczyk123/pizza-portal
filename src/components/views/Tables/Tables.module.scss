@@ -1,0 +1,11 @@
+@import '../../../styles/settings.scss';
+
+.component {
+  padding: $base-size;
+  background-image: url('../../../images/cards/background.jpg');
+}
+
+.textField {
+  width: 200px;
+  margin-left: 450px;
+}
