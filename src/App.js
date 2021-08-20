@@ -9,6 +9,8 @@ import Login from './components/views/Login/Login';
 import { StylesProvider } from '@material-ui/core/styles';
 import { createTheme } from '@material-ui/core/styles';
 import { ThemeProvider } from '@material-ui/styles';
+import { Provider } from 'react-redux';
+import store from './redux/store';
 
 const theme = createTheme({
   palette: {
@@ -19,6 +21,7 @@ const theme = createTheme({
 
 function App() {
   return (
+    <Provider store={store}>
     <BrowserRouter>
 <StylesProvider injectFirst>
         <ThemeProvider theme={theme}>
@@ -41,6 +44,7 @@ function App() {
         </ThemeProvider>
       </StylesProvider>
     </BrowserRouter>
+    </Provider>
   );
 }
 
